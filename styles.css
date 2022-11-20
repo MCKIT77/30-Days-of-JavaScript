@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --btn-pad: .5rem 1rem;
+    --btn-shadow: 0 0 .12rem .12rem;
+    --btn-bkg-color: rgba(0, 0, 0, .4);
+    --btn-color: white;
+}
+
+.btn {
+    padding: var(--btn-pad);
+    box-shadow: var(--btn-shadow);
+    background-color: var(--btn-bkg-color);
+    color: var(--btn-color);
+    display: flex;
+    margin: auto;
+}
