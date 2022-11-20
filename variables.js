@@ -6,7 +6,7 @@ function calcArea() {
     let iBase = prompt(`Enter the Base`, `Here`)
     let iHeight = prompt(`Enter the Height`, `Here`)
     tArea = .5 * +iBase * +iHeight
-    rArea = +iBase * +iHeight  
+    rArea = +iBase * +iHeight
     rPerim = 2 * (+iBase + +iHeight)
     console.log(`The area of a triangle with chosen dimensions would be ${tArea}`)
     console.log(`The area of a rectangle with chosen dimensions would be ${rArea}`)
