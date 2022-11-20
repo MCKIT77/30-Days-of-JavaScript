@@ -42,3 +42,34 @@ function calcSlope() {
     // let slopeForm = parseInt((y2 - y1)`/`(x2 - x1))
     console.log(`${slopeForm1}\/${slopeForm2}`)
 }
+
+function calcPay() {
+    let h = prompt(`Enter number of hours worked`, `Here`)
+    let r = prompt(`Enter pay rate per hour`, `Here`)
+        if(h > 40) {
+            let oth = +h - 40
+            let otPay = (1.5 * +r) * +oth 
+            let pay = (+h - +oth) * +r
+            let ttlPay = +pay + +otPay
+            console.log(`Hours worked: ${h}`)
+            console.log(`Rate of pay per hour ${r}`)
+            console.log(`Your pay is $${pay}`)
+            console.log(`Your overtime pay (time and a half) is $${otPay}`)
+            console.log(`Your total payment before taxes is ${ttlPay}`)
+        } else {
+            let pay = +h * +r
+            console.log(`Hours worked: ${h}`)
+            console.log(`Rate of pay per hour ${r}`)
+            console.log(`Your pay is ${pay}`)
+        }    
+}
+
+function countName() {
+    let fName = prompt(`Enter your first name please`)
+    if(fName.length > 7) {
+        console.log(`${fName}, your name is long`)
+    } else {
+        console.log(`${fName}, your name is short`)
+    }
+}
+

@@ -17,4 +17,5 @@
     color: var(--btn-color);
     display: flex;
     margin: auto;
+    gap: .2rem;
 }
