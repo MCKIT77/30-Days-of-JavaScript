@@ -1,6 +1,6 @@
 //This will be a file containing the exercises from each day for review.
 
-// Days 1 and 2 are not added yet, 
+// Days 1 and 2 are not added yet,
 
 //Day 3 Lvl2
 
@@ -20,3 +20,26 @@
 
 //created function that runs when you click button "get name length" that does the requested task
 
+//Compare your first name length and your family name length and you should get this output.
+//button Compare Name will ask you for you name and give you a response depending on the names length
+
+/*Declare two variables myAge and yourAge and assign them initial values and myAge and yourAge.
+
+let myAge = 250
+let yourAge = 25
+I am 225 years older than you. */
+
+
+//Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.
+//click button Drive Age
+
+
+//3153600000 100 years in seconds
+
+//click Lifetime Left it will ask your birthyear, calc the age and then give you how much time you have left in console
+
+//Create a human readable time format using the Date time object
+
+// YYYY-MM-DD HH:mm
+// DD-MM-YYYY HH:mm
+// DD/MM/YYYY HH:mm

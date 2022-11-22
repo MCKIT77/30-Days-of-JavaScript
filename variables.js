@@ -141,3 +141,47 @@ function countName() {
     }
 }
 
+
+function compareName() {
+    fName = prompt(`Enter your first name please`)
+    lName = prompt(`Enter your last name please`)
+    if (fName.length > lName.length) {
+        console.log(`Your first name, ${fName} is longer than your family name, ${lName}`)
+    } else {
+        console.log(`Your first name, ${fName} is shorter than your family name, ${lName}`)
+    }
+}
+
+function compareAge() {
+    let myAge = 250
+    let yourAge = 25
+    let ageDiff = +myAge - +yourAge
+
+    console.log(`i am ${ageDiff} years older than you`)
+}
+
+
+const DRIVING_AGE = 16
+
+function canDrive() {
+
+    let uAge = prompt(`What year were you born? (XXXX)`)
+    rAge = +year - +uAge
+    yearsLeft = +DRIVING_AGE - +rAge
+    if (rAge > DRIVING_AGE) {
+        console.log(`You are ${rAge}. You are old enough to drive`)
+    } else {
+        console.log(`You are ${rAge}. You will be able to drive in ${yearsLeft} years`)
+    }
+}
+
+function addLifetime() {
+    let uAge = prompt(`What year were you born? (XXXX)`)
+    rAge = +year - uAge
+    console.log(`If you live 100 years, you would have ${+rAge * 31536000} Seconds left to live:]`)
+
+}
+
+function getDate() {
+    console.log(`${year}/${month}/${date}`)
+}
