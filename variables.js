@@ -183,5 +183,104 @@ function addLifetime() {
 }
 
 function getDate() {
-    console.log(`${year}/${month}/${date}`)
+    console.log(`${year}-${month}-${date}`)
+    console.log(`${date}-${month}-${year}`)
+    console.log(`${date}/${month}/${year}`)
+}
+
+
+function compAB() {
+    let a = 4
+    let b = 3
+
+    if (+a < +b) {
+        console.log(`a(4) is less than b(3)`)
+    } else {
+        console.log(`a(4) is greater than b(3)`)
+    }
+
+    +a < +b
+        ? console.log(`a is less than b`)
+        : console.log(`a is greater than b`)
+}
+
+
+function checkNumber() {
+    number = prompt(`Enter a number`, `Here`)
+    value = +number % 2
+    if (+value === 0) {
+        console.log(`${number} is a even number`)
+    } else {
+        console.log(`${number} is a odd number`)
+    }
+}
+
+function giveGrade() {
+    let grade = prompt(`Enter Grade Percentage (100, 80, 75)`, `Here`)
+    switch (true) {
+        case +grade > 90:
+            console.log(`A`);
+            break
+        case +grade < 90 && +grade > 80:
+            console.log(`B`);
+            break
+        case +grade < 80 && +grade > 70:
+            console.log(`C`);
+            break
+        case +grade < 70 && +grade > 60:
+            console.log(`D`);
+            break
+        case +grade < 60:
+            console.log(`F`);
+            break
+        default:
+            console.log(`This is not a number`);
+            break
+    }
+}
+
+function giveSeason() {
+    let seasonUser = prompt(`Enter current month`)
+    let season = seasonUser.toLowerCase()
+    switch (season) {
+        case "december":
+            console.log(`The season is Winter`);
+            break
+        case "january":
+            console.log(`The season is Winter`);
+            break
+        case "february":
+            console.log(`The season is Winter`);
+            break
+        case "march":
+            console.log(`The season is Spring`);
+            break
+        case "april":
+            console.log(`The season is Spring`);
+            break
+        case "may":
+            console.log(`The season is Spring`);
+            break
+        case "june":
+            console.log(`The season is Summer`);
+            break
+        case "july":
+            console.log(`The season is Summer`);
+            break
+        case "august":
+            console.log(`The season is Summer`);
+            break
+        case "september":
+            console.log(`The season is Autumn`);
+            break
+        case "october":
+            console.log(`The season is Autumn`);
+            break
+        case "november":
+            console.log(`The season is Autumn`);
+            break
+        default:
+            console.log(`This is not a month`);
+            break
+    }
 }
