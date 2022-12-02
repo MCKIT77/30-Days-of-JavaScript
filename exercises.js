@@ -356,8 +356,18 @@ const mernStack = ['MongoDB', 'Express', 'React', 'Node']
      8    64    512
      9    81    729
      10   100   1000
+            function printNumSum() {
+                for(let i = 0; i <= 10; i++){
+                    console.log(`${i} ** ${i} = ${i ** i} = ${i ** 3}`)
+                }
+            }
 
     Use for loop to iterate from 0 to 100 and print only even numbers
+            function iterateToHundredEven() {
+                for (i = 0; i <= 100; i + 2) {
+                    console.log(`${i}`)
+                }
+            }
 
     Use for loop to iterate from 0 to 100 and print only odd numbers
 
