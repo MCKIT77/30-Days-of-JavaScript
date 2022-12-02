@@ -33,7 +33,7 @@ function numberRandom(min, max) {
     return numRan
 }
 let sentence3 = '%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching'
-// //this function takes a target string and replaces things--didnt work right-located easier way
+// //this function takes a target string and replaces things--didnt work right--located easier way
 // function scrubSentence(target, dWord1, dWord2, dWord3, dWord4, pWord) {
 //     let scrubbedSentence = target.replace(dWord1, pWord).replace(dWord2, pWord).replace(dWord3, pWord).replace(dWord4, pWord)
 //     return scrubbedSentence
@@ -282,5 +282,142 @@ function giveSeason() {
         default:
             console.log(`This is not a month`);
             break
+    }
+}
+
+// const arr = [
+//     'Asabeneh',
+//     250,
+//     true,
+//     { country: 'Finland', city: 'Helsinki' },
+//     { skills: ['HTML', 'CSS', 'JS', 'React', 'Python'] }
+// ] // arr containing different data types
+// console.log(arr)
+
+const arr = [0, 1, 2, 3, 4]
+function getItems() {
+    let fItem = arr.splice(0, 1)
+    let mItem = arr.splice(2, 1)
+    let lItem = arr.splice(4, 1)
+    console.log(arr)
+    console.log(`first item: ${fItem} , middle item: ${mItem} , last item: ${lItem}`)
+
+}
+
+const mixedDataTypes = [true, 12, 'twelve', [0, 1, 2], null, false]
+console.log(mixedDataTypes.length) //returns 6
+
+const itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon']
+
+function printCompanies() {
+    for (let i = 0; i < itCompanies.length; i++) {
+        console.log(itCompanies[`${i}`])
+    }
+
+}
+
+function changeValues() {
+    for (let i = 0; i < itCompanies.length; i++) {
+        itCompanies[`${i}`] = itCompanies[`${i}`].toUpperCase()
+    }
+    console.log(itCompanies)
+}
+
+function checkItArr(comp) {
+    let isThere = itCompanies.includes(comp)
+    isThere === -1 ? console.log(`${comp} is not on the list`) : console.log(`${comp} is on the list`)
+
+}
+
+function removeMiddle() {
+    let m = Math.round(itCompanies.length / 2)
+    mC = itCompanies.splice(`${m}`, 1)
+    console.log(mC)
+}
+
+let text = 'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.'
+
+
+
+let tScrubbed = text.replace(/\.|,/g, "")
+console.log(tScrubbed)
+let words = tScrubbed.split(" ")
+
+
+
+function scrubText() {
+    console.log(text)
+    let tScrubbed = text.replace(/\.|,/g, "")
+    console.log(tScrubbed)
+    let words = tScrubbed.split(" ")
+    console.log(words)
+    console.log(words.length)
+
+}
+
+function forLoop() {
+    for (i = 0; i <= 10; i++) {
+        console.log(`${i}`)
+    }
+}
+
+function doWhileLoop() {
+    let i = 0
+    do {
+        console.log(`${i}`)
+        i++
+    } while (i <= 10)
+
+}
+
+function whileLoop() {
+    let i = 0
+    while (i <= 10) {
+        console.log(`${i}`)
+        i++
+
+    }
+}
+
+function forLoopBack() {
+    for (i = 10; i >= 0; i--) {
+        console.log(`${i}`)
+    }
+}//this function will print 10-1 using for loop
+
+function doWhileLoopBack() {
+    let i = 10
+    do {
+        console.log(`${i}`)
+        i--
+    } while (i >= 0)
+
+
+}
+
+function whileLoopBack() {
+    let i = 10
+    while (i >= 0) {
+        console.log(`${i}`)
+        i--
+    }
+}
+
+function printNumberInput() {
+    let inputNumber = prompt(`Enter the number to stop at`, `Here`)
+    let i = 0
+    while (i <= inputNumber) {
+        console.log(i)
+        i++
+    }
+
+}
+
+function printHashtags() {
+    let hashArr = ["#"]
+    for (i = 0; i <= 6; i++) {
+        console.log(hashArr)
+        hashArr.push("#")
+
     }
 }

@@ -1,0 +1,1 @@
+const webTechs = ['JavaScript', 'Python', 'CSS', 'HTML', 'Solidity', 'C#']
