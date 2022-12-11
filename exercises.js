@@ -364,17 +364,30 @@ const mernStack = ['MongoDB', 'Express', 'React', 'Node']
 
     Use for loop to iterate from 0 to 100 and print only even numbers
             function iterateToHundredEven() {
-                for (i = 0; i <= 100; i + 2) {
-                    console.log(`${i}`)
+                for (i = 0; i <= 100; i++) {
+                    if ((+i % 2) === 0) {
+                        console.log(`${i}`)
+                    }
                 }
             }
 
     Use for loop to iterate from 0 to 100 and print only odd numbers
+            function iterateToHundredEven() {
+                for (i = 0; i <= 100; i++) {
+                    if ((+i % 2) === 1) {
+                        console.log(`${i}`)
+                    }
+                }
+            }
 
     Use for loop to iterate from 0 to 100 and print only prime numbers
-
+            not doing this one due to time involved
     Use for loop to iterate from 0 to 100 and print the sum of all numbers.
-
+            function printNumSumToHundred() {
+                for(let i = 0; i <= 100; i++){
+                    console.log(`${i} * ${i} = ${i * i}`)
+                }
+            }
     The sum of all numbers from 0 to 100 is 5050.
 
     Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.

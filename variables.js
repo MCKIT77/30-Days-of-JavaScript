@@ -218,16 +218,16 @@ function checkNumber() {
 function giveGrade() {
     let grade = prompt(`Enter Grade Percentage (100, 80, 75)`, `Here`)
     switch (true) {
-        case +grade > 90:
+        case +grade >= 90:
             console.log(`A`);
             break
-        case +grade < 90 && +grade > 80:
+        case +grade < 90 && +grade >= 80:
             console.log(`B`);
             break
-        case +grade < 80 && +grade > 70:
+        case +grade < 80 && +grade >= 70:
             console.log(`C`);
             break
-        case +grade < 70 && +grade > 60:
+        case +grade < 70 && +grade >= 60:
             console.log(`D`);
             break
         case +grade < 60:
@@ -449,3 +449,136 @@ function iterateToHundredOdd() {
         }
     }
 }
+//There is a better way to write this function below
+// function printNumSumToHundred() {
+//     for (let i = 0; i <= 100; i++) {
+//         console.log(`${i} + ${i} = ${i + i}`)
+//     }
+// }
+
+function printNumSumToHundred() {
+    // Initialize a counter variable
+    let i = 0;
+
+    // Continue looping while the counter is less than or equal to 100
+    while (i <= 100) {
+        // Print the current number and its sum
+        console.log(`${i} + ${i} = ${i + i}`);
+
+        // Increment the counter variable
+        i++;
+    }
+}
+
+function generateRandomId() {
+    // Generate a random number between 0 and 16^6 (the maximum hexadecimal value for a 6-character ID)
+    const randomNumber = Math.floor(Math.random() * 16777216);
+
+    // Convert the random number to a hexadecimal value
+    const hex = randomNumber.toString(16);
+
+    // Check if the hexadecimal value is less than 6 digits long
+    if (hex.length < 6) {
+        // Pad the hexadecimal value with leading zeros to make it 6 digits long
+        const paddedHex = "0".repeat(6 - hex.length) + hex;
+
+        // Return the padded hexadecimal value as the random ID
+        return paddedHex;
+    } else {
+        // Return the hexadecimal value as the random ID
+        return hex;
+    }
+}
+
+function printRandomHex() {
+    // Generate a random number between 0 and 16^8 (the maximum hexadecimal value)
+    const randomNumber = Math.floor(Math.random() * 16777216);
+
+    // Convert the random number to a hexadecimal value
+    const hex = randomNumber.toString(16);
+
+    // Check if the hexadecimal value is less than 6 digits long
+    if (hex.length < 6) {
+        // Pad the hexadecimal value with leading zeros to make it 6 digits long
+        const paddedHex = "0".repeat(6 - hex.length) + hex;
+
+        // Print the padded hexadecimal value in all uppercase letters
+        console.log(paddedHex.toUpperCase());
+    } else {
+        // Print the hexadecimal value in all uppercase letters
+        console.log(hex.toUpperCase());
+    }
+}
+
+function generateArrayOfRandomNumbers() {
+    // Create an empty array
+    const numbers = [];
+
+    // Generate 5 random numbers and add them to the array
+    for (let i = 0; i < 5; i++) {
+        const randomNumber = Math.floor(Math.random() * 100 + 1);  // Generates a random number between 0 and 2 (including 2)
+        numbers.push(randomNumber);
+    }
+
+    // Return the array of random numbers
+    return numbers;
+}
+
+function generateArrayOfUniqueRandomNumbers() {
+    // Create an empty array
+    const numbers = [];
+
+    // Generate 5 random numbers and add them to the array
+    while (numbers.length < 5) {
+        // Generate a random number between 1 and 100 (including 1 and 100)
+        const randomNumber = Math.floor(Math.random() * 100 + 1);
+
+        // Check if the random number is already in the array
+        if (!numbers.includes(randomNumber)) {
+            // Add the random number to the array if it is not already present
+            numbers.push(randomNumber);
+        }
+    }
+
+    // Return the array of unique random numbers
+    return numbers;
+}
+
+function generateRandomRgbColor() {
+    // Generate random values for the red, green, and blue components of the color
+    const red = Math.floor(Math.random() * 256);
+    const green = Math.floor(Math.random() * 256);
+    const blue = Math.floor(Math.random() * 256);
+
+    // Generate the RGB color number
+    const color = `rgb(${red}, ${green}, ${blue})`;
+
+    // Print the generated color number
+    console.log(color);
+
+    // Return the RGB color number
+    return color;
+}
+
+function generateId() {
+    // Create an array of possible characters for the id
+    const possibleCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    // Initialize the id variable with an empty string
+    let id = "";
+
+    // Loop six times to generate six characters for the id
+    for (let i = 0; i < 6; i++) {
+        // Generate a random index between 0 and the length of the possibleCharacters array
+        const index = Math.floor(Math.random() * possibleCharacters.length);
+
+        // Add the character at the random index to the id
+        id += possibleCharacters[index];
+    }
+
+    // Return the generated id
+    return id;
+}
+
+// Generate a random id and print it to the console
+console.log(generateId());
