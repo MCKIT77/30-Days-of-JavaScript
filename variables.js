@@ -506,7 +506,7 @@ function printRandomHex() {
         console.log(paddedHex.toUpperCase());
     } else {
         // Print the hexadecimal value in all uppercase letters
-        console.log(hex.toUpperCase());
+        return hex.toUpperCase();
     }
 }
 
@@ -582,3 +582,52 @@ function generateId() {
 
 // Generate a random id and print it to the console
 console.log(generateId());
+
+
+//function that takes 2 args , first name and last name and then prints a statement in the console using the two args
+function fullName(fName, lName) {
+    console.log(`My full name is ${fName} ${lName}`)
+}
+//declaring a dog object and giving it properties 
+const dog = {
+    name: 'Sparky',
+    color: "Cream",
+    age: "10",
+    //this will print to console 
+    bark: function () {
+        return `${this.name} says "Woof Woof!"`
+    }
+}
+
+// const user = {
+//     username,
+//     email,
+//     password,
+//     userId
+// }
+
+// function createUser() {
+//     uName = prompt(`Please enter desired Username.`, `Must be at least 3 characters.`)
+//     email = prompt(`Please enter your email (will be verified).`, `Enter Email here.`)
+//     pWord = prompt(`Please enter your password.`, `Enter password here`)
+//     uId = generateRandomId()
+
+//     Object.assign({}, user)
+// }
+users = []
+function createUser() {
+    const username = prompt('Enter your username:');
+    const email = prompt('Enter your email:');
+    const password = prompt('Enter your password:');
+    const userId = Math.floor(Math.random() * 1000000);  // generate a random user ID
+
+    const user = {
+        username,
+        email,
+        password,
+        userId
+    };
+    users.push(userId)
+    console.log(user)
+    return user;
+}

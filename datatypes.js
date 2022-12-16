@@ -89,7 +89,7 @@
 // /*variables created in variables.js
 // let firstName = "Jacob"
 // let lastName = "McKitrick"
-// let age = "27"
+// let age = "28"
 // let isMarried = true
 // let country = "USA"
 // let problem = null
