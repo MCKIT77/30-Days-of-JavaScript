@@ -510,10 +510,138 @@ Add name, legs, color, age and bark properties for the dog object. The bark prop
                 name: 'Sparky',
                 color: "Cream",
                 age: "10",
+                legs: "4"
                 bark: function() {
                     return `${this.name} says "Woof Woof!"`
                 }
             }
 Get name, legs, color, age and bark value from the dog object
+            console.log(dog.name)
+            console.log(dog.color)
+            console.log(dog.bark())
+            console.log(dog.age)
 Set new properties the dog object: breed, getDogInfo
+            dog.breed = "shih tzu"
+            dog.getDogInfo = () => console.log(dog{})
 */
+
+/*Exercises: Level 1
+const countries = ['Finland', 'Sweden', 'Denmark', 'Norway', 'IceLand']
+const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const products = [
+  { product: 'banana', price: 3 },
+  { product: 'mango', price: 6 },
+  { product: 'potato', price: ' ' },
+  { product: 'avocado', price: 8 },
+  { product: 'coffee', price: 10 },
+  { product: 'tea', price: '' },
+]
+Explain the difference between forEach, map, filter, and reduce.
+    forEach() does an operation on each item but doesnt return new array,
+    map() does an operation on each also but returns new array,
+    filter() does a filter method on each, returns new array based on filter,
+    reduce() reduces the array to a single value based on operation 
+Define a callback function before you use it in forEach, map, filter or reduce.
+    a callback function is a function that is passed as an argument to another function and is executed after some kind of event or operation has completed.
+
+Use forEach to console.log each country in the countries array.
+    printCountries = countries.forEach((country) => console.log(country))
+Use forEach to console.log each name in the names array.
+    printNames = names.forEach((name) => console.log(name))
+Use forEach to console.log each number in the numbers array.
+    printNumbers = numbers.forEach((number) => console.log(number))
+Use map to create a new array by changing each country to uppercase in the countries array.
+    printUpperCountries = countries.map((country) => console.log(country.toUpperCase()))
+Use map to create an array of countries length from countries array.
+    printCountryLength = countries.map((country) => console.log(country.length))
+Use map to create a new array by changing each number to square in the numbers array
+    printnumbersSquared = numbers.map((number) => console.log(number * number))
+Use map to change to each name to uppercase in the names array
+    printNameUpperCase = names.map((name) => console.log(name.toUpperCase()))
+Use map to map the products array to its corresponding prices.
+    const prices = products.map(product => {
+        if (product.price) {
+            return product.price;
+        }
+    });
+Use filter to filter out countries containing land.
+    contriesWLand = countries.filter((country) => console.log(country.includes("land")))
+Use filter to filter out countries having six character.
+    const sixCharacterCountries = countries.filter(country => country.length === 6);
+    console.log(sixCharacterCountries)
+Use filter to filter out countries containing six letters and more in the country array.
+    const sixCharacterCountries = countries.filter(country => country.length >= 6);
+    console.log(sixCharacterCountries)
+Use filter to filter out country start with 'E';
+    countryWOE = countries.filter((country) => country[0] != "E")
+    console.log(countryWOE)
+Use filter to filter out only prices with values.
+    const pricesWithValues = products.filter(product => product.price);
+    console.log(pricesWithValues);
+Declare a function called getStringLists which takes an array as a parameter and then returns an array only with string items.
+Use reduce to sum all the numbers in the numbers array.
+Use reduce to concatenate all the countries and to produce this sentence: Estonia, Finland, Sweden, Denmark, Norway, and IceLand are north European countries
+Explain the difference between some and every
+Use some to check if some names' length greater than seven in names array
+Use every to check if all the countries contain the word land
+Explain the difference between find and findIndex.
+Use find to find the first country containing only six letters in the countries array
+Use findIndex to find the position of the first country containing only six letters in the countries array
+Use findIndex to find the position of Norway if it doesn't exist in the array you will get -1.
+Use findIndex to find the position of Russia if it doesn't exist in the array you will get -1.
+Exercises: Level 2
+Find the total price of products by chaining two or more array iterators(eg. arr.map(callback).filter(callback).reduce(callback))
+Find the sum of price of products using only reduce reduce(callback))
+Declare a function called categorizeCountries which returns an array of countries which have some common pattern(you find the countries array in this repository as countries.js(eg 'land', 'ia', 'island','stan')).
+Create a function which return an array of objects, which is the letter and the number of times the letter use to start with a name of a country.
+Declare a getFirstTenCountries function and return an array of ten countries. Use different functional programming to work on the countries.js array
+Declare a getLastTenCountries function which which returns the last ten countries in the countries array.
+Find out which letter is used many times as initial for a country name from the countries array (eg. Finland, Fiji, France etc)
+ */
+
+// Day 10 Exercises
+/* 
+Exercises:Level 1
+const a = [4, 5, 8, 9]
+const b = [3, 4, 5, 7]
+const countries = ['Finland', 'Sweden', 'Norway']
+create an empty set
+Create a set containing 0 to 10 using loop
+Remove an element from a set
+Clear a set
+Create a set of 5 string elements from array
+Create a map of countries and number of characters of a country
+Exercises:Level 2
+Find a union b
+Find a intersection b
+Find a with b
+Exercises:Level 3
+How many languages are there in the countries object file.
+
+*** Use the countries data to find the 10 most spoken languages:
+
+   // Your output should look like this
+   console.log(mostSpokenLanguages(countries, 10))
+   [
+     { English: 91 },
+     { French: 45 },
+     { Arabic: 25 },
+     { Spanish: 24 },
+     { Russian: 9 },
+     { Portuguese: 9 },
+     { Dutch: 8 },
+     { German: 7 },
+     { Chinese: 5 },
+     { Swahili: 4 },
+     { Serbian: 4 }
+   ]
+
+  // Your output should look like this
+  console.log(mostSpokenLanguages(countries, 3))
+  [
+  {English:91},
+  {French:45},
+  {Arabic:25}
+  ]
+  */

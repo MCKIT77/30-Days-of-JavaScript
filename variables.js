@@ -599,6 +599,7 @@ const dog = {
     }
 }
 
+dog.getDogInfo = () => console.log(dog)
 // const user = {
 //     username,
 //     email,
@@ -631,3 +632,59 @@ function createUser() {
     console.log(user)
     return user;
 }
+
+let person = {
+    name: 'John',
+    age: 30,
+    job: 'developer'
+};
+
+
+function createPerson() {
+    let person = {};
+
+    person.name = prompt('Enter the name:');
+    person.age = prompt('Enter the age:');
+    person.location = prompt('Enter the location:');
+
+    return person;
+}
+
+// let newPerson = createPerson();
+
+
+learnMaps = ['jacob', 'jakemckit', 'mckit', 'mckit77', 'mckit97', 'PMCKIT', 'JMCKIT']
+let usernames = learnMaps.map((names) => names.toUpperCase())
+let usersMckit = learnMaps.filter((names) => names.includes("mckit"))
+console.log(usersMckit)
+
+const countries = ['Finland', 'Sweden', 'Denmark', 'Norway', 'IceLand']
+const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const products = [
+    { product: 'banana', price: 3 },
+    { product: 'mango', price: 6 },
+    { product: 'potato', price: ' ' },
+    { product: 'avocado', price: 8 },
+    { product: 'coffee', price: 10 },
+    { product: 'tea', price: '' },
+]
+
+const a = [4, 5, 8, 9]
+const b = [3, 4, 5, 7]
+
+
+// printCountries = countries.forEach((country) => console.log(country))
+// printNames = names.forEach((name) => console.log(name))
+// printNumbers = numbers.forEach((number) => console.log(number))
+// printUpperCountries = countries.map((country) => console.log(country.toUpperCase()))
+// printCountryLength = countries.map((country) => console.log(country.length))
+// printNumbersSquared = numbers.map((number) => console.log(number * number))
+// printNameUpperCase = names.map((name) => console.log(name.toUpperCase()))
+
+
+
+// countriesWSixChar = countries.filter((country) => console.log(country.length === 6))
+
+// countryWOE = countries.filter((country) => country[0] != "E")
+// console.log(countryWOE)
