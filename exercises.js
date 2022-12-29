@@ -607,10 +607,20 @@ const a = [4, 5, 8, 9]
 const b = [3, 4, 5, 7]
 const countries = ['Finland', 'Sweden', 'Norway']
 create an empty set
+    let eSet = new set()
 Create a set containing 0 to 10 using loop
+    let tenSet = new set()
+        for (let i = 0; i <= 10; i++) {
+            tenSet.add(i)
+        }
 Remove an element from a set
+        tenSet.delete(1)
 Clear a set
+        tenSet.clear()
 Create a set of 5 string elements from array
+        let newArr1 = ['jesse', 'jacob', 'jim', 'john', 'kay']
+        let nameSet = new set(newArr1)
+
 Create a map of countries and number of characters of a country
 Exercises:Level 2
 Find a union b
@@ -645,3 +655,65 @@ How many languages are there in the countries object file.
   {Arabic:25}
   ]
   */
+
+/*Day 11 Exercises
+Exercises: Level 1
+const constants = [2.72, 3.14, 9.81, 37, 100]
+const countries = ['Finland', 'Estonia', 'Sweden', 'Denmark', 'Norway']
+const rectangle = {
+  width: 20,
+  height: 10,
+  area: 200,
+  perimeter: 60
+}
+const users = [
+{
+  name:'Brook',
+  scores:75,
+  skills:['HTM', 'CSS', 'JS'],
+  age:16
+},
+{
+  name:'Alex',
+  scores:80,
+  skills:['HTM', 'CSS', 'JS'],
+  age:18
+},
+{
+  name:'David',
+  scores:75,
+  skills:['HTM', 'CSS'],
+  age:22
+},
+{
+  name:'John',
+  scores:85,
+  skills:['HTML'],
+  age:25
+},
+{
+  name:'Sara',
+  scores:95,
+  skills:['HTM', 'CSS', 'JS'],
+  age: 26
+},
+{
+  name:'Martha',
+  scores:80,
+  skills:['HTM', 'CSS', 'JS'],
+  age:18
+},
+{
+  name:'Thomas',
+  scores:90,
+  skills:['HTM', 'CSS', 'JS'],
+  age:20
+}
+]
+Destructure and assign the elements of constants array to e, pi, gravity, humanBodyTemp, waterBoilingTemp.
+Destructure and assign the elements of countries array to fin, est, sw, den, nor
+Destructure the rectangle object by its properties or keys.
+Exercises: Level 2
+Iterate through the users array and get all the keys of the object using destructuring
+Find the persons who have less than two skills
+*/

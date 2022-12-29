@@ -672,6 +672,7 @@ const products = [
 
 const a = [4, 5, 8, 9]
 const b = [3, 4, 5, 7]
+const c = [...a, ...b]
 
 
 // printCountries = countries.forEach((country) => console.log(country))
@@ -688,3 +689,59 @@ const b = [3, 4, 5, 7]
 
 // countryWOE = countries.filter((country) => country[0] != "E")
 // console.log(countryWOE)
+
+
+const constants = [2.72, 3.14, 9.81, 37, 100]
+const countries2 = ['Finland', 'Estonia', 'Sweden', 'Denmark', 'Norway']
+const rectangle = {
+    width: 20,
+    height: 10,
+    area: 200,
+    perimeter: 60
+}
+const day11Users = [
+    {
+        name: 'Brook',
+        scores: 75,
+        skills: ['HTM', 'CSS', 'JS'],
+        age: 16
+    },
+    {
+        name: 'Alex',
+        scores: 80,
+        skills: ['HTM', 'CSS', 'JS'],
+        age: 18
+    },
+    {
+        name: 'David',
+        scores: 75,
+        skills: ['HTM', 'CSS'],
+        age: 22
+    },
+    {
+        name: 'John',
+        scores: 85,
+        skills: ['HTML'],
+        age: 25
+    },
+    {
+        name: 'Sara',
+        scores: 95,
+        skills: ['HTM', 'CSS', 'JS'],
+        age: 26
+    },
+    {
+        name: 'Martha',
+        scores: 80,
+        skills: ['HTM', 'CSS', 'JS'],
+        age: 18
+    },
+    {
+        name: 'Thomas',
+        scores: 90,
+        skills: ['HTM', 'CSS', 'JS'],
+        age: 20
+    }
+]
+
+let [e, pi, gravity, humanBodyTemp, waterBoilingTemp] = constants 
