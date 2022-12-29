@@ -744,4 +744,6 @@ const day11Users = [
     }
 ]
 
-let [e, pi, gravity, humanBodyTemp, waterBoilingTemp] = constants 
+let [e, pi, gravity, humanBodyTemp, waterBoilingTemp] = constants
+let [fin, est, sw, den, nor] = countries2
+let { name, score, skills, userAge } = day11Users

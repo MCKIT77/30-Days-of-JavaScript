@@ -711,8 +711,14 @@ const users = [
 }
 ]
 Destructure and assign the elements of constants array to e, pi, gravity, humanBodyTemp, waterBoilingTemp.
+    let [e, pi, gravity, humanBodyTemp, waterBoilingTemp] = constants 
+
 Destructure and assign the elements of countries array to fin, est, sw, den, nor
+    let [fin, est, sw, den, nor] = countries2
+
 Destructure the rectangle object by its properties or keys.
+    let {name,score,skills,age} = day11Users
+
 Exercises: Level 2
 Iterate through the users array and get all the keys of the object using destructuring
 Find the persons who have less than two skills
