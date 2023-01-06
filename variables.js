@@ -744,6 +744,20 @@ const day11Users = [
     }
 ]
 
+const keysArray = [];
+
+for (const { name, scores, skills, age } of day11Users) {
+    keysArray.push(name, scores, skills, age);
+}
+
+console.log(keysArray);
+
+const usersWithLessThanTwoSkills = day11Users.filter(user => user.skills.length < 2);
+
+console.log(usersWithLessThanTwoSkills);
 let [e, pi, gravity, humanBodyTemp, waterBoilingTemp] = constants
 let [fin, est, sw, den, nor] = countries2
 let { name, score, skills, userAge } = day11Users
+
+
+

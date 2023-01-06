@@ -721,5 +721,12 @@ Destructure the rectangle object by its properties or keys.
 
 Exercises: Level 2
 Iterate through the users array and get all the keys of the object using destructuring
+    const keysArray = [];
+
+for (const { keys } of day11Users) {
+  keysArray.push(keys);
+}
+
+console.log(keysArray);
 Find the persons who have less than two skills
 */
