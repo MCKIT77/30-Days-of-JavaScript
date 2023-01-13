@@ -730,3 +730,200 @@ for (const { keys } of day11Users) {
 console.log(keysArray);
 Find the persons who have less than two skills
 */
+
+/*Exercises Level 1
+Create an Animal class. The class will have name, age, color, legs properties and create different methods
+    class Animal {
+        constructor(name, age, color, legs) {
+            this.name = name
+            this.age = age
+            this.color = color
+            this.legs = legs
+
+        }
+        doggyYears() {
+            const dYears = this.age * 7
+            return dYears
+        }
+    }
+
+
+Create a Dog and Cat child class from the Animal Class.
+
+    class Dog extends Animal {
+        constructor(name, age, color, legs, weight, tongueLenth) {
+            super(name, age, color, legs)
+            this.weight = weight
+            this.tongueLength = tongueLength
+
+        }
+        bark() {
+            console.log('BARK BARK BARK BARK')
+            document.write('BARK BARK BARK BARK')
+        }
+        get getDoggyYears() {
+            doggyYears()
+            return dYears
+        }
+
+    }
+
+    class Cat extends Animal {
+        constructor(name, age, color, legs, weight, furPattern){
+            super(name, age, color, legs)
+            this.weight = weight
+            this.furPattern - furPattern
+        }
+        hiss() {
+            console.log('HCHHHHHHH')
+            document.write('HCHHHHHH')
+        }
+    }
+
+Exercises Level 2
+Override the method you create in Animal class
+*/
+/*
+Day 16 Excercises
+const skills2 = ['HTML', 'CSS', 'JS', 'React','Node', 'Python']
+let age3 = 250;
+let isMarried2
+ = true
+const student = {
+  firstName:'Asabeneh',
+  lastName:'Yetayehe',
+  age:250,
+  isMarried:true,
+  skills:['HTML', 'CSS', 'JS', 'React','Node', 'Python', ]
+}
+const txt = `{
+    "Alex": {
+        "email": "alex@alex.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 30
+    },
+    "Asab": {
+        "email": "asab@asab.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Redux",
+            "MongoDB",
+            "Express",
+            "React",
+            "Node"
+        ],
+        "age": 25,
+        "isLoggedIn": false,
+        "points": 50
+    },
+    "Brook": {
+        "email": "daniel@daniel.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Redux"
+        ],
+        "age": 30,
+        "isLoggedIn": true,
+        "points": 50
+    },
+    "Daniel": {
+        "email": "daniel@alex.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Python"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 40
+    },
+    "John": {
+        "email": "john@john.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Redux",
+            "Node.js"
+        ],
+        "age": 20,
+        "isLoggedIn": true,
+        "points": 50
+    },
+    "Thomas": {
+        "email": "thomas@thomas.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 40
+    },
+    "Paul": {
+        "email": "paul@paul.com",
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "MongoDB",
+            "Express",
+            "React",
+            "Node"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 40
+    }
+}
+`
+Exercises Level 1
+Change skills array to JSON using JSON.stringify()
+    console.log(JSON.stringify(skills2))
+Stringify the age variable
+   console.log(JSON.stringify(age3))
+Stringify the isMarried variable
+Stringify the student object
+Exercises Level 2
+Stringify the students object with only firstName, lastName and skills properties
+*/
+
+
+/*const countriesAPI = 'https://restcountries.com/v2/all'
+const catsAPI = 'https://api.thecatapi.com/v1/breeds'
+Exercises: Level 1
+Read the countries API using fetch and print the name of country, capital, languages, population and area.
+    fetch(countriesAPI)
+        .then(response => response)
+        .then(data => {
+            data.forEach(country => {
+                console.log('Country: ' + country.name);
+                console.log('Capital: ' + country.capital);
+                console.log('Language: ' + country.languages.map(lang => lang.name).join(', '));
+                console.log('Population: ' + country.population);
+                console.log('Area: ' + country.area);
+            });
+        })
+        .catch(error => console.log(error))
+Exercises: Level 2
+Print out all the cat names in to catNames variable.
+Exercises: Level 3
+Read the cats api and find the average weight of cat in metric unit.
+Read the countries api and find out the 10 largest countries
+Read the countries api and count total number of languages in the world used as officials.
+*/
