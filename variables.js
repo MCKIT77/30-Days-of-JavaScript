@@ -874,3 +874,83 @@ JSON.stringify(skills2)
 
 const countriesAPI = 'https://restcountries.com/v2/all'
 const catsAPI = 'https://api.thecatapi.com/v1/breeds'
+
+const firstParagraph = document.querySelector('p')
+
+const secondParagraph = document.querySelector('#secondParagraph')
+
+const thirdParagraph = document.querySelector('#thirdParagraph')
+
+const allParagraphs = document.querySelectorAll('p')
+
+const fourthParagraph = document.getElementsByTagName('p')
+
+allParagraphs[3].innerHTML = 'Fourth Paragraph'
+
+allParagraphs[3].setAttribute('class', 'fourth-paragraph')
+allParagraphs[3].id = 'fourthParagraph'
+
+
+const getNodeListContent = () => {
+    for (i = 0; i < allParagraphs.length; i++) {
+        console.log(allParagraphs[i].innerHTML)
+    }
+}
+
+const changeFontSize = () => {
+    for (i = 0; i < allParagraphs.length; i++) {
+        allParagraphs[i].setAttribute('style', 'font-size: 35px')
+    }
+}
+
+const changeBackgroundColor = () => {
+    allParagraphs.forEach((paragraph, i) => {
+        if (i % 2 === 0) {
+            paragraph.style.backgroundColor = "green"
+
+
+        } else {
+            paragraph.style.backgroundColor = "red"
+
+        }
+    })
+}
+
+const year1 = new Date().getFullYear();
+document.querySelector("h1").innerText = `Asabeneh Yetayeh challenges in ${year}`;
+
+// Get all the list items
+const listItems = document.querySelectorAll("li");
+
+// Iterate over each list item and apply the appropriate background color
+listItems.forEach(item => {
+    if (item.innerText.includes("Done")) {
+        item.style.backgroundColor = "green";
+    } else if (item.innerText.includes("Ongoing")) {
+        item.style.backgroundColor = "yellow";
+    } else {
+        item.style.backgroundColor = "red";
+    }
+});
+
+// Set an interval to change the background color of the date and time every second
+setInterval(() => {
+    const currentTime = new Date().toLocaleTimeString();
+    document.querySelector("h2").innerText = currentTime;
+    document.querySelector("h2").style.backgroundColor = getRandomColor();
+}, 1000);
+
+// Set an interval to change the color of the year every second
+setInterval(() => {
+    document.querySelector("h1").style.color = getRandomColor();
+}, 1000);
+
+// Function to generate a random color
+function getRandomColor() {
+    const letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}

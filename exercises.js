@@ -909,21 +909,107 @@ const catsAPI = 'https://api.thecatapi.com/v1/breeds'
 Exercises: Level 1
 Read the countries API using fetch and print the name of country, capital, languages, population and area.
     fetch(countriesAPI)
-        .then(response => response)
+        .then(response => response.JSON)
         .then(data => {
-            data.forEach(country => {
-                console.log('Country: ' + country.name);
-                console.log('Capital: ' + country.capital);
-                console.log('Language: ' + country.languages.map(lang => lang.name).join(', '));
-                console.log('Population: ' + country.population);
-                console.log('Area: ' + country.area);
-            });
+            console.log("Country: " + data.name);
+            console.log("Capital: " + data.capital);
+            console.log("Languages: " + data.languages);
+            console.log("Population: " + data.population);
+            console.log("Area: " + data.area);
         })
-        .catch(error => console.log(error))
+        .catch(error => console.error(error))
+
+
+
+        .map(lang => lang.name).join(', ')
 Exercises: Level 2
 Print out all the cat names in to catNames variable.
+        let catNames = []
+
+        fetch(catAPI)
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(cat => {
+                catNames.push(cat.name)
+                });
+                console.log(catNames)
+            })
+        .catch(error => console.error(error))
 Exercises: Level 3
 Read the cats api and find the average weight of cat in metric unit.
 Read the countries api and find out the 10 largest countries
 Read the countries api and count total number of languages in the world used as officials.
 */
+
+/*Exercise: Level 1
+Create an index.html file and put four p elements as above: Get the first paragraph by using document.querySelector(tagname) and tag name
+            <p class="first-paragraph" id="firstParagraph">First Paragraph</p>
+            <p class="second-paragraph" id="secondParagraph">Second Paragraph</p>
+            <p class="third-paragraph" id="thirdParagraph">Third Paragraph</p>
+            <p></p>
+
+            const firstParagraph = document.querySelector('p')
+Get each of the the paragraph using document.querySelector('#id') and by their id
+            const secondParagraph = document.querySelector('#secondParagraph')
+
+            const thirdParagraph = document.querySelector('#thirdParagraph')
+
+            const allParagraphs = document.querySelectorAll('p')
+
+            const fourthParagraph = document.getElementsByTagName('p')           
+Get all the p as nodeList using document.querySelectorAll(tagname) and by their tag name
+            const allParagraphs = document.querySelectorAll('p')
+Loop through the nodeList and get the text content of each paragraph
+            const getNodeListContent = () => {
+                for (i = 0; i < allParagraphs.length; i++) {
+                    console.log(allParagraphs[i].innerHTML)
+                }
+            }
+Set a text content to paragraph the fourth paragraph,Fourth Paragraph
+            allParagraphs[3].innerHTML = 'Fourth Paragraph'
+Set id and class attribute for all the paragraphs using different attribute setting methods
+            allParagraphs[3].setAttribute('class', 'fourth-paragraph')
+            allParagraphs[3].id = 'fourthParagraph'
+
+Exercise: Level 2
+Change stye of each paragraph using JavaScript(eg. color, background, border, font-size, font-family)
+            for (i = 0; i < allParagraphs.length; i++) {
+                allParagraphs.setAttraibute('style', 'font-size: 1rem')
+            }
+Select all paragraphs and loop through each elements and give the first and third paragraph a color of green, and the second and the fourth paragraph a red color
+
+Set text content, id and class to each paragraph
+
+Exercise: Level 3
+
+DOM: Mini project 1
+Develop the following application, use the following HTML elements to get started with. You will get the same code on starter folder. Apply all the styles and functionality using JavaScript only.
+
+The year color is changing every 1 second
+The date and time background color is changing every on seconds
+Completed challenge has background green
+Ongoing challenge has background yellow
+Coming challenges have background red
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript for Everyone:DOM</title>
+  </head>
+  <body>
+    <div class="wrapper">
+        <h1>Asabeneh Yetayeh challenges in 2020</h1>
+        <h2>30DaysOfJavaScript Challenge</h2>
+        <ul>
+            <li>30DaysOfPython Challenge Done</li>
+            <li>30DaysOfJavaScript Challenge Ongoing</li>
+            <li>30DaysOfReact Challenge Coming</li>
+            <li>30DaysOfFullStack Challenge Coming</li>
+            <li>30DaysOfDataAnalysis Challenge Coming</li>
+            <li>30DaysOfReactNative Challenge Coming</li>
+            <li>30DaysOfMachineLearning Challenge Coming</li>
+        </ul>
+    </div>
+  </body>
+</html>
+ */
