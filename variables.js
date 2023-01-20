@@ -889,13 +889,7 @@ allParagraphs[3].innerHTML = 'Fourth Paragraph'
 
 allParagraphs[3].setAttribute('class', 'fourth-paragraph')
 allParagraphs[3].id = 'fourthParagraph'
-//creating elements
-let fifth_paragraph
-fifth_paragraph = document.createElement('p')
-fifth_paragraph.className = 'fifth-paragraph'
-fifth_paragraph.id = 'fifthParagraph'
-fifth_paragraph.textContent = 'Fifth Paragraph'
-document.body.appendChild(fifth_paragraph)
+
 
 const getNodeListContent = () => {
     for (i = 0; i < allParagraphs.length; i++) {
